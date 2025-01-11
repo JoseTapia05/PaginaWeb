@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.card-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #6a11cb;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+}
+
+#menuButton {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #2575fc;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#menuButton:hover {
+    background-color: #6a11cb;
+    color: #fff;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    color: #333;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2575fc;
+    text-align: center;
+}
+
+.modal-body button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    background-color: #6a11cb;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-body button:hover {
+    background-color: #2575fc;
+}
+
+.modal-body i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}

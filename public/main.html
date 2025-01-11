@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h1 class="card-title">Nombre de la Institución</h1>
+                <p class="card-text text-secondary">Nombre del Proyecto</p>
+                <button id="menuButton" class="btn">Secciones</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title" id="menuModalLabel">Secciones</h5>
+                    <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <button id="botonHome" class="btn btn-secondary w-100 mb-3">
+                        <i class="bi bi-house-door-fill me-2"></i> Home Page
+                    </button>
+                    <button id="botonTestimonio" class="btn btn-secondary w-100 mb-3">
+                        <i class="bi bi-chat-quote-fill me-2"></i> Testimonios
+                    </button>
+                    <button id="botonSabias" class="btn btn-secondary w-100 mb-3">
+                        <i class="bi bi-lightbulb-fill me-2"></i> ¿Sabías Qué...?
+                    </button>
+                    <button id="botonEquipo" class="btn btn-secondary w-100">
+                        <i class="bi bi-people-fill me-2"></i> Equipo Creativo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('menuButton').addEventListener('click', () => {
+            const menuModal = new bootstrap.Modal(document.getElementById('menuModal'));
+            menuModal.show();
+        });
+
+        document.getElementById('botonHome').addEventListener('click', () => {
+            window.location.href = 'HomePage.html';
+        });
+
+        document.getElementById('botonTestimonio').addEventListener('click', () => {
+            window.location.href = 'Testimonios.html';
+        });
+
+        document.getElementById('botonSabias').addEventListener('click', () => {
+            window.location.href = 'SabiasQue.html';
+        });
+
+        document.getElementById('botonEquipo').addEventListener('click', () => {
+            window.location.href = 'Equipo.html';
+        });
+    </script>
+</body>
+</html>
