@@ -1,12 +1,21 @@
 {
   "name": "paginasweb",
   "version": "1.0.0",
-  "main": "main.html",
+  "main": "index.js",
   "scripts": {
-    "start": "echo \"No hay script de inicio especificado\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
