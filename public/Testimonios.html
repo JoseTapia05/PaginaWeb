@@ -15,10 +15,10 @@
                 <h1 class="card-title">Testimonios</h1>
                 <p class="card-text text-secondary">Explora los audios y videos de experiencias compartidas por nuestra comunidad.</p>
                 <div class="d-flex justify-content-center gap-3 mt-4">
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" id="botonAudio">
                         <i class="bi bi-mic-fill me-2"></i> Audios
                     </button>
-                    <button class="btn btn-success">
+                    <button class="btn btn-success" id="botonVideo">
                         <i class="bi bi-camera-video-fill me-2"></i> Videos
                     </button>
                 </div>
@@ -32,5 +32,15 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('botonAudio').addEventListener('click', () => {
+            window.location.href = 'Audio.html';
+        });
+
+        document.getElementById('botonVideo').addEventListener('click', () => {
+            window.location.href = 'Video.html';
+        });
+    </script>
 </body>
 </html>

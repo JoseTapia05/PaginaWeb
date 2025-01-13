@@ -1,0 +1,168 @@
+body {
+    background: linear-gradient(135deg, #08eb98, #9bf805);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Asegura que la página se alinee desde la parte superior */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la página */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* El contenedor ocupará el 100% del ancho disponible */
+    max-width: 1200px; /* Tamaño máximo para el contenedor */
+    margin: 20px; /* Espaciado exterior consistente */
+    box-sizing: border-box; /* Incluye los bordes y el padding en el ancho total */
+}
+
+.card {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    margin: 10px;
+    flex: 1; /* Permite que las tarjetas se ajusten dinámicamente */
+    min-width: 250px; /* Tamaño mínimo */
+    max-width: 300px; /* Tamaño máximo */
+    text-align: center;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #008080;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1.3rem;
+    color: #555;
+    text-align: center;
+}
+
+.grade-section {
+    margin-top: 20px;
+}
+
+.grade-section h2 {
+    font-size: 1.8rem;
+    color: #444;
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que las tarjetas se adapten al espacio */
+    gap: 20px; /* Espacio entre las tarjetas */
+    align-items: center;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #2575fc;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #5c9ef8;
+}
+
+.btn-success {
+    background-color: #34c759;
+    border: none;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #62d97e;
+}
+
+.btn-warning {
+    background-color: #f4a261;
+    border: none;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #f9c784;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #8d99ae;
+}
+
+.btn-cuarto {
+    background-color: #ff5733; /* Naranja brillante */
+    border: none;
+    color: #fff;
+}
+
+.btn-cuarto:hover {
+    background-color: #ff8c66; /* Naranja más claro */
+}
+
+.btn {
+    margin-bottom: 10px; /* Agrega espacio entre el botón y el video */
+}
+
+/* Contenedor de videos */
+.videos-row {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que los videos se acomoden si no caben en una línea */
+    justify-content: space-between;  /* Distribuye los videos de forma equitativa */
+    gap: 20px;  /* Espacio entre los videos */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Estilo para cada tarjeta de video */
+.video-card {
+    flex: 1 1 calc(33.333% - 20px);  /* Ocupa un 33.33% del contenedor con espacio entre ellos */
+    max-width: 320px;  /* Limita el tamaño máximo de las tarjetas */
+    box-sizing: border-box;  /* Asegura que el margen no afecte el tamaño total */
+    text-align: center;  /* Centra el contenido dentro de cada tarjeta */
+    margin-bottom: 20px;  /* Espacio debajo de cada video */
+}
+
+/* Estilo para los videos, asegurando que no se desborden */
+video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;  /* Asegura que los videos no se desborden */
+    height: auto;  /* Mantiene la proporción del video */
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 992px) {
+    .video-card {
+        flex: 1 1 calc(50% - 20px);  /* En pantallas medianas, los videos ocupan el 50% */
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 576px) {
+    .video-card {
+        flex: 1 1 100%;  /* En pantallas pequeñas, los videos ocupan el 100% */
+    }
+}

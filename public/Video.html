@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Videos.css">
+    <script>
+        function toggleVideo(videoId, button) {
+            const video = document.getElementById(videoId);
+            const icon = button.querySelector("i");
+            if (video.paused) {
+                video.play();
+                icon.classList.remove("fa-play");
+                icon.classList.add("fa-pause");
+            } else {
+                video.pause();
+                icon.classList.remove("fa-pause");
+                icon.classList.add("fa-play");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="card-title">Videos</h1>
+        <p class="card-text">Selecciona un grado y mira los videos disponibles.</p>
+
+        <!-- Primer Grado -->
+        <div class="grade-section">
+            <h2>Primer Grado</h2>
+            <div class="videos-row">
+                <div class="video-card">
+                    <button class="btn btn-primary" onclick="toggleVideo('video1', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video1" src="video1.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-primary" onclick="toggleVideo('video2', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video2" src="video2.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-primary" onclick="toggleVideo('video3', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video3" src="video3.mp4" width="320" height="180"></video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo Grado -->
+        <div class="grade-section mt-4">
+            <h2>Segundo Grado</h2>
+            <div class="videos-row">
+                <div class="video-card">
+                    <button class="btn btn-success" onclick="toggleVideo('video4', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video4" src="video4.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-success" onclick="toggleVideo('video5', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video5" src="video5.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-success" onclick="toggleVideo('video6', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video6" src="video6.mp4" width="320" height="180"></video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tercer Grado -->
+        <div class="grade-section mt-4">
+            <h2>Tercer Grado</h2>
+            <div class="videos-row">
+                <div class="video-card">
+                    <button class="btn btn-warning" onclick="toggleVideo('video7', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video7" src="video7.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-warning" onclick="toggleVideo('video8', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video8" src="video8.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-warning" onclick="toggleVideo('video9', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video9" src="video9.mp4" width="320" height="180"></video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuarto Grado -->
+        <div class="grade-section mt-4">
+            <h2>Cuarto Grado</h2>
+            <div class="videos-row">
+                <div class="video-card">
+                    <button class="btn btn-cuarto" onclick="toggleVideo('video10', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video7" src="video10.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-cuarto" onclick="toggleVideo('video11', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video8" src="video11.mp4" width="320" height="180"></video>
+                </div>
+                <div class="video-card">
+                    <button class="btn btn-cuarto" onclick="toggleVideo('video12', this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <video id="video9" src="video12.mp4" width="320" height="180"></video>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <a href="Testimonios.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Regresar
+            </a>
+        </div>
+    </div>
+     <!-- Font Awesome JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>
