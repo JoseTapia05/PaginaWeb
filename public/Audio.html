@@ -13,12 +13,34 @@
         function toggleAudio(audioId, button) {
             const audio = document.getElementById(audioId);
             const icon = button.querySelector("i");
+
+            // Si el audio está en pausa, se reproduce y el ícono cambia a pausa
             if (audio.paused) {
                 audio.play();
                 icon.classList.remove("fa-play");
                 icon.classList.add("fa-pause");
             } else {
                 audio.pause();
+                icon.classList.remove("fa-pause");
+                icon.classList.add("fa-play");
+            }
+        }
+
+        // Asegura que el ícono cambie cuando se reproduzca el audio
+        function updateIconOnPlay(audioId, button) {
+            const audio = document.getElementById(audioId);
+            const icon = button.querySelector("i");
+            if (!audio.paused) {
+                icon.classList.remove("fa-play");
+                icon.classList.add("fa-pause");
+            }
+        }
+
+        // Asegura que el ícono cambie cuando se pause el audio
+        function updateIconOnPause(audioId, button) {
+            const audio = document.getElementById(audioId);
+            const icon = button.querySelector("i");
+            if (audio.paused) {
                 icon.classList.remove("fa-pause");
                 icon.classList.add("fa-play");
             }
@@ -37,15 +59,17 @@
                         <button class="btn btn-primary" onclick="toggleAudio('audio1', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio1" src="/public/resources/audio1.mp3"></audio>
+                        <audio id="audio1" src="./resources/audio1.mp3" onplay="updateIconOnPlay('audio1', this.previousElementSibling)" onpause="updateIconOnPause('audio1', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-primary" onclick="toggleAudio('audio2', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio2" src="audio2.mp3"></audio>
+                        <audio id="audio2" src="./resources/audio2.mp3" onplay="updateIconOnPlay('audio2', this.previousElementSibling)" onpause="updateIconOnPause('audio2', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-primary" onclick="toggleAudio('audio3', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio3" src="audio3.mp3"></audio>
+                        <audio id="audio3" src="./resources/audio3.mp3" onplay="updateIconOnPlay('audio3', this.previousElementSibling)" onpause="updateIconOnPause('audio3', this.previousElementSibling)"></audio>
                     </div>
                 </div>
                 <div class="grade-section mt-4">
@@ -54,15 +78,17 @@
                         <button class="btn btn-success" onclick="toggleAudio('audio4', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio4" src="audio4.mp3"></audio>
+                        <audio id="audio4" src="./resources/audio4.mp3" onplay="updateIconOnPlay('audio4', this.previousElementSibling)" onpause="updateIconOnPause('audio4', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-success" onclick="toggleAudio('audio5', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio5" src="audio5.mp3"></audio>
+                        <audio id="audio5" src="./resources/audio5.mp3" onplay="updateIconOnPlay('audio5', this.previousElementSibling)" onpause="updateIconOnPause('audio5', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-success" onclick="toggleAudio('audio6', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio6" src="audio6.mp3"></audio>
+                        <audio id="audio6" src="./resources/audio6.mp3" onplay="updateIconOnPlay('audio6', this.previousElementSibling)" onpause="updateIconOnPause('audio6', this.previousElementSibling)"></audio>
                     </div>
                 </div>
                 <div class="grade-section mt-4">
@@ -71,15 +97,17 @@
                         <button class="btn btn-warning" onclick="toggleAudio('audio7', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio7" src="audio7.mp3"></audio>
+                        <audio id="audio7" src="./resources/audio7.mp3" onplay="updateIconOnPlay('audio7', this.previousElementSibling)" onpause="updateIconOnPause('audio7', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-warning" onclick="toggleAudio('audio8', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio8" src="audio8.mp3"></audio>
+                        <audio id="audio8" src="./resources/audio8.mp3" onplay="updateIconOnPlay('audio8', this.previousElementSibling)" onpause="updateIconOnPause('audio8', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-warning" onclick="toggleAudio('audio9', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio9" src="audio9.mp3"></audio>
+                        <audio id="audio9" src="./resources/audio9.mp3" onplay="updateIconOnPlay('audio9', this.previousElementSibling)" onpause="updateIconOnPause('audio9', this.previousElementSibling)"></audio>
                     </div>
                 </div>
                 <div class="grade-section mt-4">
@@ -88,15 +116,17 @@
                         <button class="btn btn-cuarto" onclick="toggleAudio('audio10', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio10" src="audio10.mp3"></audio>
+                        <audio id="audio10" src="./resources/audio10.mp3" onplay="updateIconOnPlay('audio10', this.previousElementSibling)" onpause="updateIconOnPause('audio10', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-cuarto" onclick="toggleAudio('audio11', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio11" src="audio11.mp3"></audio>
+                        <audio id="audio11" src="./resources/audio11.mp3" onplay="updateIconOnPlay('audio11', this.previousElementSibling)" onpause="updateIconOnPause('audio11', this.previousElementSibling)"></audio>
+                        
                         <button class="btn btn-cuarto" onclick="toggleAudio('audio12', this)">
                             <i class="fas fa-play"></i>
                         </button>
-                        <audio id="audio12" src="audio12.mp3"></audio>
+                        <audio id="audio12" src="./resources/audio12.mp3" onplay="updateIconOnPlay('audio12', this.previousElementSibling)" onpause="updateIconOnPause('audio12', this.previousElementSibling)"></audio>
                     </div>
                 </div>                
                 <div class="mt-5">
