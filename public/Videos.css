@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #08eb98, #9bf805);
+    background-color: #0022ff; /* Fondo azul marino sólido */
     font-family: 'Arial', sans-serif;
     color: #fff;
     margin: 0;
@@ -7,6 +7,26 @@ body {
     justify-content: center;
     align-items: flex-start; /* Asegura que la página se alinee desde la parte superior */
     min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la página */
+    position: relative; /* Necesario para las franjas */
+}
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura de las franjas */
+}
+
+body::before {
+    top: 50%; /* Franja blanca */
+    background-color: #ff4136;
+}
+
+body::after {
+    bottom: 50%; /* Franja roja */
+    background-color: #fff;
 }
 
 .container {
@@ -16,8 +36,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%; /* El contenedor ocupará el 100% del ancho disponible */
     max-width: 1200px; /* Tamaño máximo para el contenedor */
-    margin: 20px; /* Espaciado exterior consistente */
-    box-sizing: border-box; /* Incluye los bordes y el padding en el ancho total */
+    margin: 20px;
+    box-sizing: border-box;
+    position: relative; /* Asegura que esté sobre las franjas */
+    z-index: 1;
 }
 
 .card {
@@ -25,16 +47,16 @@ body {
     padding: 0;
     border: none;
     margin: 10px;
-    flex: 1; /* Permite que las tarjetas se ajusten dinámicamente */
-    min-width: 250px; /* Tamaño mínimo */
-    max-width: 300px; /* Tamaño máximo */
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
     text-align: center;
 }
 
 .card-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #008080;
+    color: #0022ff; /* Azul marino */
     text-align: center;
 }
 
@@ -57,8 +79,8 @@ body {
 .d-flex {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite que las tarjetas se adapten al espacio */
-    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap;
+    gap: 20px;
     align-items: center;
 }
 
@@ -124,45 +146,41 @@ button:hover {
 }
 
 .btn {
-    margin-bottom: 10px; /* Agrega espacio entre el botón y el video */
+    margin-bottom: 10px;
 }
 
 /* Contenedor de videos */
 .videos-row {
     display: flex;
-    flex-wrap: wrap;  /* Permite que los videos se acomoden si no caben en una línea */
-    justify-content: space-between;  /* Distribuye los videos de forma equitativa */
-    gap: 20px;  /* Espacio entre los videos */
-    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
 }
 
-/* Estilo para cada tarjeta de video */
 .video-card {
-    flex: 1 1 calc(33.333% - 20px);  /* Ocupa un 33.33% del contenedor con espacio entre ellos */
-    max-width: 320px;  /* Limita el tamaño máximo de las tarjetas */
-    box-sizing: border-box;  /* Asegura que el margen no afecte el tamaño total */
-    text-align: center;  /* Centra el contenido dentro de cada tarjeta */
-    margin-bottom: 20px;  /* Espacio debajo de cada video */
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 320px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Estilo para los videos, asegurando que no se desborden */
 video {
     display: block;
     margin: 0 auto;
-    max-width: 100%;  /* Asegura que los videos no se desborden */
-    height: auto;  /* Mantiene la proporción del video */
+    max-width: 100%;
+    height: auto;
 }
 
-/* Responsividad para pantallas medianas */
 @media (max-width: 992px) {
     .video-card {
-        flex: 1 1 calc(50% - 20px);  /* En pantallas medianas, los videos ocupan el 50% */
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
-/* Responsividad para pantallas pequeñas */
 @media (max-width: 576px) {
     .video-card {
-        flex: 1 1 100%;  /* En pantallas pequeñas, los videos ocupan el 100% */
+        flex: 1 1 100%;
     }
 }

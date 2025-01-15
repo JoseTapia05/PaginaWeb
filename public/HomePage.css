@@ -1,12 +1,32 @@
 body {
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    background-color: #0022ff; /* Fondo azul marino sólido */
     font-family: 'Arial', sans-serif;
     color: #fff;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    position: relative; /* Necesario para las franjas */
+}
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura de las franjas */
+}
+
+body::before {
+    top: 50%; /* Franja blanca */
+    background-color: #ff4136;
+}
+
+body::after {
+    bottom: 50%; /* Franja roja */
+    background-color: #fff;
 }
 
 .card {
@@ -14,12 +34,17 @@ body {
     margin: 0 auto;
     background-color: #fff;
     color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* Para asegurarse de estar sobre las franjas */
+    z-index: 1;
 }
 
 .card-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #6a11cb;
+    color: #0022ff; /* Morado */
 }
 
 .card-text {
@@ -41,6 +66,7 @@ button:hover {
 .btn-primary {
     background-color: #2575fc;
     border: none;
+    color: #fff;
 }
 
 .btn-primary:hover {
@@ -50,6 +76,7 @@ button:hover {
 .btn-success {
     background-color: #34c759;
     border: none;
+    color: #fff;
 }
 
 .btn-success:hover {

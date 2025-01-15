@@ -1,12 +1,34 @@
 body {
-    background: linear-gradient(135deg, #f44336, #e57373);
+    background-color: #0022ff; /* Fondo azul marino sólido */
     font-family: 'Arial', sans-serif;
     color: #fff;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    position: relative; /* Necesario para las franjas */
+}
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura de las franjas */
+}
+
+body::before {
+    top: 50%; /* Franja blanca */
+    background-color: #ff4136;
+    transform: translateY(-25px); /* Centra las franjas en el medio */
+}
+
+body::after {
+    top: 50%; /* Franja roja */
+    background-color: #fff;
+    transform: translateY(25px); /* Coloca la franja roja debajo de la blanca */
 }
 
 .card {
@@ -14,18 +36,32 @@ body {
     margin: 0 auto;
     background-color: #fff;
     color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* Asegura que la tarjeta esté sobre las franjas */
+    z-index: 1;
 }
 
 .card-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ff0000;
+    color: #0022ff;
 }
 
-img {
-    width: 150px; 
-    height: 150px; 
+.team-image {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
+    border-radius: 50%; /* Imagen circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 button {
@@ -40,19 +76,46 @@ button:hover {
 }
 
 .btn-primary {
-    background-color: #ff0000cf;
+    background-color: #ff0000cf; /* Rojo */
     border: none;
+    color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #e60000; /* Rojo más oscuro */
 }
 
 .btn-secondary {
-    background-color: #9e9e9e;
+    background-color: #9e9e9e; /* Gris */
     border: none;
+    color: #fff;
 }
 
 .btn-secondary:hover {
-    background-color: #bdbdbd;
+    background-color: #bdbdbd; /* Gris más claro */
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-header {
+    background-color: #333;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+video {
+    width: 100%; /* Asegura que el video ocupe todo el ancho */
+    max-width: 100%; /* Limita el tamaño máximo */
+}
+
+@media (max-width: 767px) {
+    .col-md-2 {
+        margin-bottom: 20px; /* Agrega espacio entre columnas en pantallas pequeñas */
+    }
 }

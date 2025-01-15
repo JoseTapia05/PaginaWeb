@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #08eb98, #9bf805);
+    background-color: #0022ff; /* Fondo azul marino sólido */
     font-family: 'Arial', sans-serif;
     color: #fff;
     display: flex;
@@ -7,6 +7,25 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative; /* Necesario para las franjas */
+}
+
+body::before, body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura de las franjas */
+}
+
+body::before {
+    top: 50%; /* Franja superior */
+    background-color: #ff4136;
+}
+
+body::after {
+    bottom: 50%; /* Franja inferior */
+    background-color: #fff;
 }
 
 .card {
@@ -14,12 +33,17 @@ body {
     margin: 0 auto;
     background-color: #fff;
     color: #333;
+    position: relative; /* Asegura que esté por encima de las franjas */
+    z-index: 1;
+    padding: 20px; /* Mejora la apariencia */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
 }
 
 .card-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #2e7d32;
+    color: #0022ff; /* Azul marino para mantener consistencia */
 }
 
 .card-text {

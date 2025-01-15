@@ -1,0 +1,151 @@
+/* Configuración global del body */
+body {
+    background-color: #0022ff; /* Fondo azul marino sólido */
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+    position: relative; /* Necesario para las franjas */
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
+}
+
+/* Franjas decorativas */
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px; /* Altura de las franjas */
+}
+
+body::before {
+    top: 50%; /* Franja blanca */
+    background-color: #ff4136;
+}
+
+body::after {
+    bottom: 50%; /* Franja roja */
+    background-color: #fff;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    max-width: 1200px; /* Ajusta el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 15px; /* Espaciado interno */
+}
+
+/* Estilo de las filas */
+.row {
+    margin: 0; /* Elimina márgenes no deseados que puedan causar desbordamientos */
+}
+
+/* Configuración de las tarjetas */
+.card {
+    max-width: 100%; /* Asegura que las tarjetas no superen el ancho del contenedor */
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative; /* Asegura que esté sobre las franjas decorativas */
+    z-index: 1;
+}
+
+/* Títulos de las tarjetas */
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0022ff; /* Morado */
+    text-align: center; /* Centra los títulos */
+}
+
+/* Texto de las tarjetas */
+.card-text {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+/* Botones generales */
+button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Botón azul */
+.btn-primary {
+    background-color: #2575fc;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #5c9ef8;
+}
+
+/* Botón verde */
+.btn-success {
+    background-color: #34c759;
+    border: none;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #62d97e;
+}
+
+/* Estilo de las imágenes */
+.img-uniform {
+    width: 100%; /* Asegura que las imágenes se adapten al contenedor */
+    height: 200px; /* Mantiene una altura uniforme */
+    object-fit: cover; /* Ajusta las imágenes sin deformarlas */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Configuración de los modales */
+.modal-dialog {
+    max-width: 90%; /* Ajusta el tamaño máximo del modal */
+    margin: 0 auto; /* Centra el modal */
+}
+
+.modal-body video {
+    border-radius: 5px; /* Bordes redondeados para los videos */
+    width: 100%; /* Asegura que los videos ocupen el ancho completo */
+}
+
+/* Espaciado y diseño responsivo adicional */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.5rem; /* Reduce el tamaño de los títulos en pantallas pequeñas */
+    }
+
+    button {
+        font-size: 1rem; /* Ajusta el tamaño de los botones en pantallas pequeñas */
+        padding: 8px 16px;
+    }
+}
+
+.texto-titulo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* Morado */
+    text-align: center; /* Centra los títulos */
+}
+
+.modal-header {
+    background-color: #333;
+    border-bottom: 1px solid #dee2e6;
+}
