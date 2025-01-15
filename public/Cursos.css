@@ -41,21 +41,37 @@ body::after {
     padding: 15px; /* Espaciado interno */
 }
 
+/* Estilo de las filas */
+.row {
+    margin: 0; /* Elimina márgenes no deseados que puedan causar desbordamientos */
+}
 
-/* Diseño de las tarjetas de cada curso */
+/* Configuración de las tarjetas */
 .card {
-    max-width: 100%;
-    margin-bottom: 20px;
+    max-width: 100%; /* Asegura que las tarjetas no superen el ancho del contenedor */
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
     background-color: #fff;
     color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    position: relative; /* Asegura que esté sobre las franjas decorativas */
+    z-index: 1;
 }
 
+/* Títulos de las tarjetas */
 .card-title {
     font-size: 2rem;
-    color: #0022ff;
+    font-weight: bold;
+    color: #0022ff; /* Morado */
+    text-align: center; /* Centra los títulos */
+}
+
+.card-title-dos {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* Morado */
+    text-align: center; /* Centra los títulos */
 }
 
 .card-body {
@@ -104,10 +120,15 @@ button:hover {
 /* Modal contenido */
 .modal-dialog {
     max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .modal-body {
     text-align: left;
+    color: #000000;
 }
 
 .modal-header {
@@ -117,7 +138,7 @@ button:hover {
 
 .img-uniform {
     width: 100%;
-    height: 150px;
+    height: 400px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -125,4 +146,15 @@ button:hover {
 .d-flex {
     gap: 15px;
     justify-content: center;
+}
+
+video {
+    width: 100%; /* Asegura que el video ocupe todo el ancho */
+    max-width: 100%; /* Limita el tamaño máximo */
+}
+
+@media (max-width: 767px) {
+    .col-md-2 {
+        margin-bottom: 20px; /* Agrega espacio entre columnas en pantallas pequeñas */
+    }
 }
