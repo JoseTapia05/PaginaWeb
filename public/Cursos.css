@@ -158,3 +158,18 @@ video {
         margin-bottom: 20px; /* Agrega espacio entre columnas en pantallas pequeñas */
     }
 }
+
+#botonTalleres {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    color: #0022ff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#botonTalleres:hover {
+    background-color: #ff4136;
+    color: #fff;
+}
