@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Cursos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="mb-5">Cursos</h1>
+
+        <!-- Curso 1 -->
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h2 class="card-title">Curso 1: Desarrollo Web</h2>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposito1">Propósito</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalUnidades1">Unidades</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalGaleria1">Galería</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 2 -->
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h2 class="card-title">Curso 2: Programación en Python</h2>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposito2">Propósito</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalUnidades2">Unidades</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalGaleria2">Galería</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 3 -->
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h2 class="card-title">Curso 3: Bases de Datos</h2>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposito3">Propósito</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalUnidades3">Unidades</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalGaleria3">Galería</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 4 -->
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h2 class="card-title">Curso 4: Inteligencia Artificial</h2>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposito4">Propósito</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalUnidades4">Unidades</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalGaleria4">Galería</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 5 -->
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h2 class="card-title">Curso 5: Diseño de Interfaces</h2>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposito5">Propósito</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalUnidades5">Unidades</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalGaleria5">Galería</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 6 -->
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h2 class="card-title">Curso 6: Ciberseguridad</h2>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposito6">Propósito</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalUnidades6">Unidades</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalGaleria6">Galería</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 7 -->
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card-body">
+                <h2 class="card-title">Curso 7: Marketing Digital</h2>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProposito7">Propósito</button>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalUnidades7">Unidades</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalGaleria7">Galería</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Propósito -->
+        <!-- Modal Propósito Curso 1 -->
+        <div class="modal fade" id="modalProposito1" tabindex="-1" aria-labelledby="modalProposito1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProposito1Label">Propósito del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El propósito del curso es proporcionar los conocimientos fundamentales para el desarrollo web, desde el front-end hasta el back-end.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Propósito Curso 2 -->
+        <div class="modal fade" id="modalProposito2" tabindex="-1" aria-labelledby="modalProposito2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProposito2Label">Propósito del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El propósito del curso es enseñar los fundamentos de la programación utilizando Python para desarrollar aplicaciones y sistemas eficientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Propósito Curso 3 -->
+        <div class="modal fade" id="modalProposito3" tabindex="-1" aria-labelledby="modalProposito3Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProposito3Label">Propósito del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El propósito del curso es familiarizar a los estudiantes con las principales herramientas y metodologías para el manejo de bases de datos relacionales y no relacionales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Propósito Curso 4 -->
+        <div class="modal fade" id="modalProposito4" tabindex="-1" aria-labelledby="modalProposito4Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProposito4Label">Propósito del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El propósito del curso es ofrecer una visión completa sobre la Inteligencia Artificial, sus aplicaciones y los principios fundamentales detrás de las técnicas más utilizadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Propósito Curso 5 -->
+        <div class="modal fade" id="modalProposito5" tabindex="-1" aria-labelledby="modalProposito5Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProposito5Label">Propósito del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El propósito de este curso es introducir los conceptos básicos del diseño de interfaces de usuario y su implementación en proyectos de software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Propósito Curso 6 -->
+        <div class="modal fade" id="modalProposito6" tabindex="-1" aria-labelledby="modalProposito6Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProposito6Label">Propósito del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El propósito del curso es capacitar en el uso de técnicas y herramientas para la protección de sistemas, redes y aplicaciones contra amenazas y ataques cibernéticos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Propósito Curso 7 -->
+        <div class="modal fade" id="modalProposito7" tabindex="-1" aria-labelledby="modalProposito7Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProposito7Label">Propósito del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>El propósito del curso es proporcionar los conocimientos necesarios para entender y aplicar estrategias de marketing digital en diferentes plataformas y redes sociales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal Unidades -->
+                <!-- Modal Unidades Curso 1 -->
+        <div class="modal fade" id="modalUnidades1" tabindex="-1" aria-labelledby="modalUnidades1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalUnidades1Label">Unidades del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Unidad 1: Introducción al Desarrollo Web</li>
+                            <li>Unidad 2: HTML y CSS</li>
+                            <li>Unidad 3: JavaScript y Frameworks</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <img src="unit1.jpg" class="img-uniform" alt="Unidad 1">
+                            <img src="unit2.jpg" class="img-uniform" alt="Unidad 2">
+                            <img src="unit3.jpg" class="img-uniform" alt="Unidad 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Unidades Curso 2 -->
+        <div class="modal fade" id="modalUnidades2" tabindex="-1" aria-labelledby="modalUnidades2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalUnidades2Label">Unidades del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Unidad 1: Fundamentos de Python</li>
+                            <li>Unidad 2: Estructuras de Datos</li>
+                            <li>Unidad 3: Aplicaciones en Python</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <img src="unit1.jpg" class="img-uniform" alt="Unidad 1">
+                            <img src="unit2.jpg" class="img-uniform" alt="Unidad 2">
+                            <img src="unit3.jpg" class="img-uniform" alt="Unidad 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Unidades Curso 3 -->
+        <div class="modal fade" id="modalUnidades3" tabindex="-1" aria-labelledby="modalUnidades3Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalUnidades3Label">Unidades del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Unidad 1: Introducción a las Bases de Datos</li>
+                            <li>Unidad 2: Modelado de Datos</li>
+                            <li>Unidad 3: Consultas y Administración</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <img src="unit1.jpg" class="img-uniform" alt="Unidad 1">
+                            <img src="unit2.jpg" class="img-uniform" alt="Unidad 2">
+                            <img src="unit3.jpg" class="img-uniform" alt="Unidad 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Unidades Curso 4 -->
+        <div class="modal fade" id="modalUnidades4" tabindex="-1" aria-labelledby="modalUnidades4Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalUnidades4Label">Unidades del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Unidad 1: Fundamentos de la Inteligencia Artificial</li>
+                            <li>Unidad 2: Machine Learning</li>
+                            <li>Unidad 3: Redes Neuronales</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <img src="unit1.jpg" class="img-uniform" alt="Unidad 1">
+                            <img src="unit2.jpg" class="img-uniform" alt="Unidad 2">
+                            <img src="unit3.jpg" class="img-uniform" alt="Unidad 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Unidades Curso 5 -->
+        <div class="modal fade" id="modalUnidades5" tabindex="-1" aria-labelledby="modalUnidades5Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalUnidades5Label">Unidades del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Unidad 1: Introducción al Diseño de Interfaces</li>
+                            <li>Unidad 2: Herramientas para el Diseño UI</li>
+                            <li>Unidad 3: Prototipado de Interfaces</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <img src="unit1.jpg" class="img-uniform" alt="Unidad 1">
+                            <img src="unit2.jpg" class="img-uniform" alt="Unidad 2">
+                            <img src="unit3.jpg" class="img-uniform" alt="Unidad 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Unidades Curso 6 -->
+        <div class="modal fade" id="modalUnidades6" tabindex="-1" aria-labelledby="modalUnidades6Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalUnidades6Label">Unidades del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Unidad 1: Conceptos de Ciberseguridad</li>
+                            <li>Unidad 2: Ataques y Defensa de Redes</li>
+                            <li>Unidad 3: Seguridad en Aplicaciones Web</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <img src="unit1.jpg" class="img-uniform" alt="Unidad 1">
+                            <img src="unit2.jpg" class="img-uniform" alt="Unidad 2">
+                            <img src="unit3.jpg" class="img-uniform" alt="Unidad 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Unidades Curso 7 -->
+        <div class="modal fade" id="modalUnidades7" tabindex="-1" aria-labelledby="modalUnidades7Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalUnidades7Label">Unidades del Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Unidad 1: Introducción al Marketing Digital</li>
+                            <li>Unidad 2: Estrategias en Redes Sociales</li>
+                            <li>Unidad 3: Publicidad Digital</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <img src="unit1.jpg" class="img-uniform" alt="Unidad 1">
+                            <img src="unit2.jpg" class="img-uniform" alt="Unidad 2">
+                            <img src="unit3.jpg" class="img-uniform" alt="Unidad 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal Galería -->
+        <!-- Modal Galería Curso 1 -->
+        <div class="modal fade" id="modalGaleria1" tabindex="-1" aria-labelledby="modalGaleria1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGaleria1Label">Galería de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-3">
+                            <img src="photo1.jpg" class="img-uniform" alt="Foto 1">
+                            <img src="photo2.jpg" class="img-uniform" alt="Foto 2">
+                            <img src="photo3.jpg" class="img-uniform" alt="Foto 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Galería Curso 2 -->
+        <div class="modal fade" id="modalGaleria2" tabindex="-1" aria-labelledby="modalGaleria2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGaleria2Label">Galería de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-3">
+                            <img src="photo1.jpg" class="img-uniform" alt="Foto 1">
+                            <img src="photo2.jpg" class="img-uniform" alt="Foto 2">
+                            <img src="photo3.jpg" class="img-uniform" alt="Foto 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Galería Curso 3 -->
+        <div class="modal fade" id="modalGaleria3" tabindex="-1" aria-labelledby="modalGaleria3Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGaleria3Label">Galería de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-3">
+                            <img src="photo1.jpg" class="img-uniform" alt="Foto 1">
+                            <img src="photo2.jpg" class="img-uniform" alt="Foto 2">
+                            <img src="photo3.jpg" class="img-uniform" alt="Foto 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Galería Curso 4 -->
+        <div class="modal fade" id="modalGaleria4" tabindex="-1" aria-labelledby="modalGaleria4Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGaleria4Label">Galería de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-3">
+                            <img src="photo1.jpg" class="img-uniform" alt="Foto 1">
+                            <img src="photo2.jpg" class="img-uniform" alt="Foto 2">
+                            <img src="photo3.jpg" class="img-uniform" alt="Foto 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Galería Curso 5 -->
+        <div class="modal fade" id="modalGaleria5" tabindex="-1" aria-labelledby="modalGaleria5Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGaleria5Label">Galería de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-3">
+                            <img src="photo1.jpg" class="img-uniform" alt="Foto 1">
+                            <img src="photo2.jpg" class="img-uniform" alt="Foto 2">
+                            <img src="photo3.jpg" class="img-uniform" alt="Foto 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Galería Curso 6 -->
+        <div class="modal fade" id="modalGaleria6" tabindex="-1" aria-labelledby="modalGaleria6Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGaleria6Label">Galería de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-3">
+                            <img src="photo1.jpg" class="img-uniform" alt="Foto 1">
+                            <img src="photo2.jpg" class="img-uniform" alt="Foto 2">
+                            <img src="photo3.jpg" class="img-uniform" alt="Foto 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Galería Curso 7 -->
+        <div class="modal fade" id="modalGaleria7" tabindex="-1" aria-labelledby="modalGaleria7Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGaleria7Label">Galería de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex gap-3">
+                            <img src="photo1.jpg" class="img-uniform" alt="Foto 1">
+                            <img src="photo2.jpg" class="img-uniform" alt="Foto 2">
+                            <img src="photo3.jpg" class="img-uniform" alt="Foto 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
