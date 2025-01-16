@@ -6,8 +6,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado de height a min-height */
     position: relative; /* Necesario para las franjas */
+    overflow-x: hidden; /* Evita que desborde horizontalmente */
 }
 
 body::before,
@@ -33,6 +34,7 @@ body::after {
 
 .card {
     max-width: 800px;
+    width: 90%; /* Ajusta el ancho en móviles */
     margin: 0 auto;
     background-color: #fff;
     color: #333;
